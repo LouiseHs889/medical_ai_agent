@@ -1,0 +1,112 @@
+/* 容器置中，限制寬度 */
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+/* 標題 */
+.container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+    #chat {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      height: 400px;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .user, .gpt {
+      margin: 10px 0;
+      padding: 8px 12px;
+      border-radius: 6px;
+      max-width: 80%;
+    }
+    .user {
+      background: #d1e7dd;
+      align-self: flex-end;
+    }
+    .gpt {
+      background: #e2e3e5;
+      align-self: flex-start;
+    }
+    #inputArea {
+      display: flex;
+      margin-top: 10px;
+    }
+    #prompt {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+    #sendBtn {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  #chat {
+  height: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.05);
+}
+
+/* 輸入區，排成一行 */
+#inputArea {
+  display: flex;
+  gap: 12px;
+}
+
+/* textarea 撐滿剩餘空間 */
+.input_comment {
+  flex: 1;
+  resize: vertical;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.input_comment:focus {
+  outline: none;
+  border-color: #3b82f6; /* 藍色 focus */
+  box-shadow: 0 0 6px #3b82f6aa;
+}
+
+/* 送出按鈕 */
+#inputArea button {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+#inputArea button:hover {
+  background-color: #2563eb;
+}
+
+#inputArea button:active {
+  background-color: #1e40af;
+}

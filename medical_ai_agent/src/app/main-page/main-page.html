@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h2>沒事聊一下</h2>
+  <div id="chat">
+    <div *ngFor="let msg of messages">
+      <p><strong>you:</strong>{{msg.user}}</p>
+      <p><strong>AI:</strong>
+        <span *ngIf="msg.bot==='AI思考中'">
+          <span class="ai_loader"></span>{{msg.bot}}
+        </span>
+        <span *ngIf="msg.bot!=='AI思考中'">
+          {{msg.bot}}
+        </span>
+      </p>
+    </div>
+  </div>
+  <div id="inputArea">
+    <textarea class="input_comment"
+      [(ngModel)]="input_comment"
+      placeholder="請輸入你的 prompt..."
+      rows="3"
+    ></textarea>
+    <button (click)="show()">送出</button>
+    <!-- <button (click)="startSpeechRecognition()">語音</button> -->
+  </div>
+
+</div>
