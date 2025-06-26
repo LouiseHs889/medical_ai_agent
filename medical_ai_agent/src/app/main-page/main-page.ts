@@ -33,7 +33,7 @@ constructor(private http:HttpClient){}
       .subscribe({
         next: (res) => {
           const botReply = res?.apiapi || '⚠️ 無法取得回覆。';
-          this.messages[currentIndex].bot = botReply;
+          this.messages[currentIndex].bot = botReply.choices[0].message.content;
         },
         error: () => {
           this.messages[currentIndex].bot = '❌ 系統錯誤，請稍後再試。';
@@ -54,20 +54,4 @@ constructor(private http:HttpClient){}
     this.scrollToBottom();
   }
 
-  //  private baseUrl = 'http://localhost:8000';  // 根據你的後端設定修改
-
-
-
-  // getApiapi(): Observable<any> {
-  //   return this.http.get(`${this.baseUrl}/kkk`);
-  // }
-    getData():void{
-    this.http.get<any>('http://localhost:8000/kkk').subscribe(data=>{
-     console.log('get the data',data)
-     this.input_comment=data;
-    // this.cdr.detectChanges(); 
-    alert(JSON.stringify(this.input_comment))
-    })
-
- }
 }
